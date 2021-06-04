@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>
+        <mat-icon>settings</mat-icon><b class="textIcon">Manage</b>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/manager" style="color:#606060">
+          <mat-icon>laptop</mat-icon><b class="textIcon">Computers</b>
+        </a>
+        
+        <a mat-list-item style="color:#606060" (click)="openAccount()">
+          <mat-icon>account_circle</mat-icon><b class="textIcon">My Account</b>
+        </a>
+        
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-button matTooltip="Gz Home" routerLink="/home"><mat-icon>laptop</mat-icon> Gz Computer</button>
+        
+        <span class="example-spacer"></span>
+        
+        <button mat-icon-button>
+          <mat-icon matTooltip="Account" (click)="openAccount()">account_circle</mat-icon>
+        </button>
+  
+      </mat-toolbar>
+
+      <app-computerManager></app-computerManager>
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

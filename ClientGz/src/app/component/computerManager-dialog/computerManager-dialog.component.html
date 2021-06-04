@@ -1,0 +1,73 @@
+<h1 mat-dialog-title>{{action}} Computer</h1>
+    <div mat-dialog-content fxLayoutGap="20px" style="width:700px">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name :</mat-label>
+            <input matInput placeholder="enter name" [(ngModel)]="local_data.name">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Price :</mat-label>
+            <input matInput placeholder="enter price" [(ngModel)]="local_data.price">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Amount :</mat-label>
+            <input matInput placeholder="enter name" [(ngModel)]="local_data.amount">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Type Cpu :</mat-label>
+            <input matInput placeholder="enter type" [(ngModel)]="local_data.typeCpu">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Type Disk</mat-label>
+            <input matInput placeholder="enter type" [(ngModel)]="local_data.typeDisk">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Size Disk</mat-label>
+            <input matInput placeholder="enter size" [(ngModel)]="local_data.sizeDisk">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Size Ram</mat-label>
+            <input matInput placeholder="enter size" [(ngModel)]="local_data.sizeRam">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Size Screen</mat-label>
+            <input matInput placeholder="enter size"  [(ngModel)]="local_data.sizeScreen">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Size Pin</mat-label>
+            <input matInput placeholder="enter size"  [(ngModel)]="local_data.sizePin">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Weight</mat-label>
+            <input matInput placeholder="enter weight" [(ngModel)]="local_data.weight">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Info :</mat-label>
+            <input matInput placeholder="enter info" [(ngModel)]="local_data.info">
+        </mat-form-field>
+        
+        <div><img [src]="url" *ngIf="url"></div>
+        <p>
+            <input type="file" (change)="selectFile($event)">
+        </p>
+    </div>
+
+<mat-dialog-actions>
+    <button mat-button matTooltip="Save" (click)="doAction()">
+        <mat-icon>save_alt</mat-icon>
+    </button>
+    <button mat-button matTooltip="Exit" mat-dialog-close>
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+    <button mat-button matTooltip="Delete" (click)="delete(local_data.id)">
+        <mat-icon>delete_outline</mat-icon>
+    </button>
+</mat-dialog-actions>
+

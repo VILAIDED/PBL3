@@ -1,0 +1,19 @@
+<p>Account</p>
+<div mat-dialog-content fxLayoutGap="20px" >
+    <mat-form-field class="example-full-width">
+	    <mat-label>Name :</mat-label>
+            <input matInput placeholder="enter name" [(ngModel)]="local_data.name">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+	    <mat-label>Password :</mat-label>
+            <input matInput placeholder="enter password" [(ngModel)]="local_data.password">
+    </mat-form-field>
+</div>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+    
+    <button mat-raised-button color="primary" (click)="regis()">Register</button>
+</mat-dialog-actions>
+

@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Detail Computer</h1>
+<div mat-dialog-content fxLayoutGap="20px" style="width:800px">
+
+        <hr>
+
+        <div class="menu">
+                <div><img [src]="url" style="width: 100%;"></div>
+        </div>
+
+        <div class="main">
+                <h1>{{local_data.name}}</h1>
+                <div><b>Price : </b>{{local_data.price}} K</div>
+                <div><b>Amount : </b>{{local_data.amount}}</div>
+                <div><b>Type Cpu : </b>{{local_data.typeCpu}}</div>
+                <div><b>Type Disk : </b>{{local_data.typeDisk}}</div>
+                <div><b>Size Disk : </b>{{local_data.sizeDisk}} Gb</div>
+                <div><b>Size Ram : </b>{{local_data.sizeRam}} Gb</div>
+                <div><b>Size Screen : </b>{{local_data.sizeScreen}}"</div>
+                <div><b>Size Pin : </b>{{local_data.sizePin}} mAh</div>
+                <div><b>Weight : </b>{{local_data.weight}} Kg</div>
+                <div><b>Info : </b>{{local_data.info}}</div>
+        </div>
+</div>
+
+<mat-dialog-actions>
+        <button mat-button matTooltip="Add to cart" (click)="addToCart(local_data)">
+                <mat-icon>shopping_cart</mat-icon>
+        </button>
+
+        <button mat-button matTooltip="Exit" mat-dialog-close>
+                <mat-icon>exit_to_app</mat-icon>
+        </button>
+</mat-dialog-actions>

@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Receiver info </h1>
+
+<div mat-dialog-content fxLayoutGap="20px" >
+    <mat-form-field class="example-full-width">
+	    <mat-label>Name :</mat-label>
+            <input matInput placeholder="enter name" [(ngModel)]="local_data.name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+	    <mat-label>Phone :</mat-label>
+            <input matInput placeholder="enter phone" [(ngModel)]="local_data.phone">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+	    <mat-label>Address :</mat-label>
+            <input matInput placeholder="enter address" [(ngModel)]="local_data.address">
+    </mat-form-field>
+</div>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="oder()">Submit</button>
+</mat-dialog-actions>
